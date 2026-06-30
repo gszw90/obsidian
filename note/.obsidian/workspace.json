@@ -11,14 +11,14 @@
             "id": "9a625a54a6f24a9e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "mac/软件.md",
-                "mode": "source",
-                "source": false
+                "aFile": "note/.obsidian/workspace.json",
+                "bFile": "note/.obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "软件"
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -94,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mac/软件.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "软件 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -113,12 +112,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "mac/软件.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "软件 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -156,13 +154,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mac/软件.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "软件 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -194,12 +191,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4e0d81db83563e79",
+  "active": "9a625a54a6f24a9e",
   "lastOpenFiles": [
+    "未命名.base",
+    "欢迎.md",
     "mac/技巧.md",
     "mac/软件.md",
-    "mac",
-    "未命名.base",
-    "欢迎.md"
+    "mac"
   ]
 }

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "fe794bbc5f6d2cf6",
+        "id": "b11a2997a8f420b1",
         "type": "tabs",
         "children": [
           {
-            "id": "9a625a54a6f24a9e",
+            "id": "8c9c3cc0edb29783",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "note/.obsidian/workspace.json",
-                "bFile": "note/.obsidian/workspace.json",
-                "aRef": ""
+                "file": "Resource/网页.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "网页"
             }
           }
         ]
@@ -41,7 +41,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Resource/网页.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "网页 的反向链接列表"
             }
           },
           {
@@ -112,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Resource/网页.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "出链"
+              "title": "网页 的出链列表"
             }
           },
           {
@@ -154,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Resource/网页.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "网页 的大纲"
             }
           },
           {
@@ -173,11 +176,11 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,12 +194,37 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9a625a54a6f24a9e",
+  "active": "8c9c3cc0edb29783",
   "lastOpenFiles": [
-    "未命名.base",
-    "欢迎.md",
-    "mac/技巧.md",
-    "mac/软件.md",
-    "mac"
+    "wiki/entities/zread.md",
+    "wiki/entities/zread.md.tmp.8930.7907a0c1f246",
+    "wiki/sources/开发网页工具.md",
+    "wiki/concepts/技能自进化闭环.md",
+    "wiki/entities/SkillOpt.md",
+    "wiki/sources/SkillOpt-Plugin.md",
+    "Resource/未命名",
+    "Resource/网页.md",
+    "Develop/Ai/Plugin/SkillOpt.md",
+    "Resource",
+    "Mac/技巧.md",
+    "Develop/Ai/Plugin",
+    "Develop/Ai",
+    "Develop",
+    "wiki/log.md.tmp.8930.34ca3d2df009",
+    "wiki/concepts/开发容器.md",
+    "wiki/concepts/开发容器.md.tmp.8930.f8b5d2f2d5cc",
+    "wiki/entities/OrbStack.md",
+    "wiki/entities/OrbStack.md.tmp.8930.4ab2b7c3fc0b",
+    "wiki/sources/Mac-开发软件-容器.md",
+    "wiki/sources/Mac-开发软件-容器.md.tmp.8930.4383dfa6a904",
+    "wiki/concepts/Mac-快捷键.md",
+    "wiki/sources/Mac-技巧-快捷键.md",
+    "wiki/log.md",
+    "wiki/hot.md",
+    "wiki/index.md",
+    "wiki/overview.md",
+    "创建链接.md",
+    "Mac/软件.md",
+    "欢迎.md"
   ]
 }

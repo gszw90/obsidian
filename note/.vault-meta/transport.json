@@ -1,0 +1,12 @@
+{
+  "preferred": "filesystem",
+  "fallback_chain": ["filesystem"],
+  "available": {
+    "cli": { "present": false, "binary": "obsidian-cli", "version_string": null },
+    "filesystem": { "present": true },
+    "mcp_obsidian": { "present": null, "detection": "deferred" },
+    "mcpvault": { "present": null, "detection": "deferred" }
+  },
+  "manual_override": false,
+  "note": "Detected 2026-06-30. No Obsidian CLI binary, no MCP server. Filesystem fallback is the floor and always works."
+}

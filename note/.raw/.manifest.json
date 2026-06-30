@@ -1,0 +1,46 @@
+{
+  "sources": {
+    "mac/技巧.md": {
+      "hash": "89cf3e402e2cf68ecdd358c1c5ece875",
+      "ingested_at": "2026-07-01",
+      "pages_created": [
+        "wiki/sources/Mac-技巧-快捷键.md",
+        "wiki/concepts/Mac-快捷键.md"
+      ],
+      "pages_updated": []
+    },
+    "mac/软件.md": {
+      "hash": "53fe9747611138eb8b6ef4ac41437416",
+      "ingested_at": "2026-07-01",
+      "pages_created": [
+        "wiki/sources/Mac-开发软件-容器.md",
+        "wiki/entities/OrbStack.md",
+        "wiki/concepts/开发容器.md"
+      ],
+      "pages_updated": []
+    },
+    "Develop/Ai/Plugin/SkillOpt.md": {
+      "hash": "75fe17f1bd34662ce3c222f87b2a3bc2",
+      "ingested_at": "2026-07-01",
+      "pages_created": [
+        "wiki/sources/SkillOpt-Plugin.md",
+        "wiki/entities/SkillOpt.md",
+        "wiki/concepts/技能自进化闭环.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/overview.md"
+      ]
+    },
+    "Resource/网页.md": {
+      "hash": "533eacfd093b94a1c77ac5443d9272ac",
+      "ingested_at": "2026-07-01",
+      "pages_created": [
+        "wiki/sources/开发网页工具.md",
+        "wiki/entities/zread.md"
+      ],
+      "pages_updated": []
+    }
+  },
+  "address_map": {}
+}

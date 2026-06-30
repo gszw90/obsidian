@@ -1,0 +1,4 @@
+{
+  "mode": "generic",
+  "description": "Generic wiki structure (claude-obsidian v1.7 default). Pages filed flat under wiki/sources/, wiki/entities/, wiki/concepts/, wiki/domains/."
+}

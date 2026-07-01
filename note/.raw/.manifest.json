@@ -33,13 +33,52 @@
       ]
     },
     "Resource/网页.md": {
-      "hash": "533eacfd093b94a1c77ac5443d9272ac",
-      "ingested_at": "2026-07-01",
+      "hash": "d7b07fdbab8922ad367b437a7bcc9009",
+      "ingested_at": "2026-07-02",
       "pages_created": [
-        "wiki/sources/开发网页工具.md",
-        "wiki/entities/zread.md"
+        "wiki/sources/常用网址导航.md",
+        "wiki/entities/zread.md",
+        "wiki/entities/千问.md",
+        "wiki/entities/ChatGPT.md",
+        "wiki/entities/HelloGitHub.md",
+        "wiki/entities/科技爱好者周刊.md",
+        "wiki/concepts/AI对话网页.md",
+        "wiki/concepts/技术资讯订阅.md"
       ],
       "pages_updated": []
+    },
+    "Resource/浏览器插件.md": {
+      "hash": "6ea12a2b1704a56ddc1adae056d1de28",
+      "ingested_at": "2026-07-02",
+      "pages_created": [
+        "wiki/sources/浏览器插件清单.md",
+        "wiki/entities/暴力猴.md",
+        "wiki/entities/沉浸式翻译.md",
+        "wiki/entities/AdGuard.md",
+        "wiki/concepts/浏览器扩展.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/overview.md",
+        "wiki/hot.md",
+        "wiki/log.md"
+      ]
+    },
+    "Resource/软件.md": {
+      "hash": "574f21e61348a16d0c05e8a78d8338f1",
+      "ingested_at": "2026-07-02",
+      "pages_created": [
+        "wiki/sources/跨平台软件清单.md",
+        "wiki/entities/gopeed.md",
+        "wiki/entities/v2rayN.md",
+        "wiki/entities/clash-verge.md",
+        "wiki/entities/legado.md",
+        "wiki/concepts/翻墙代理工具.md"
+      ],
+      "pages_updated": [
+        "wiki/entities/OrbStack.md",
+        "wiki/sources/跨平台软件清单.md"
+      ]
     }
   },
   "address_map": {}

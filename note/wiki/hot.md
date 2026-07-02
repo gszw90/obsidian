@@ -2,14 +2,28 @@
 title: 热缓存
 type: hot
 created: 2026-07-01
-updated: 2026-07-02
+updated: 2026-07-03
 ---
 
 # 热缓存
 
 最近 ingest 上下文。下次会话先读这里，避免重读全页。
 
-## 2026-07-02 re-ingest | 网页 + 软件源更新（最新）
+## 2026-07-03 ingest | 第 4 批：Headroom + Python 包管理 + WSL/zsh（最新）
+
+- 新源：[[Headroom - 上下文压缩代理]]、[[Python 包管理工具对比]]、[[WSL zsh 终端配置]]
+- 新建实体：[[Headroom]]、[[uv]]、[[oh-my-zsh]]
+- 新建概念：[[上下文压缩]]、[[Python 包管理]]、[[zsh 终端配置]]
+- 主题扩展：**AI 上下文压缩**、**Python 工具链**、**终端环境**
+- 关键洞察：
+  - [[Headroom]] 安装命令 `uv tool install "headroom-ai[all]"` 直接依赖 [[uv]] —— 两源交叉
+  - Headroom（压缩）与 [[技能自进化闭环]]（SkillOpt，固化）同属 agent 效率谱系，互补可叠加
+  - uv 一个工具替代 pip + pipx + venv + pyenv，Rust 实现 10–100× 速度
+  - oh-my-zsh 装完不继承 `~/.bashrc` → 已装命令 `command not found`，需手动补环境变量到 `~/.zshrc`
+- 编辑判断：pip / pipx / zsh 为基线设施，折入概念页未单独建实体
+- delta（同日）：`mac/技巧.md` +Spotlight（`⌘+空格`），更新 [[Mac 快捷键]]
+
+## 2026-07-02 re-ingest | 网页 + 软件源更新
 
 - 源笔记 delta 触发再 ingest：
   - `Resource/网页.md` 大幅扩展（1 项 → 三类导航：开发 / 娱乐 / 资讯）

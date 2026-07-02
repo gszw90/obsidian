@@ -2,12 +2,37 @@
 title: 日志
 type: log
 created: 2026-07-01
-updated: 2026-07-02
+updated: 2026-07-03
 ---
 
 # 日志
 
 Ingest 操作记录。新条目置顶。
+
+## 2026-07-03 re-ingest | delta：技巧.md 增 Spotlight
+
+- 触发：`mac/技巧.md` hash 变更（`89cf3e40…` → `d6b8ad15…`），+3 行
+- 新增：`# 搜索` section，`command + space`（Spotlight）
+- 更新：[[Mac 快捷键]]（表格 +1 行，待补充 Spotlight→Launchpad）、[[Mac 技巧 - 快捷键]]（表格 +1 行，新增「搜索」小节）
+- 无新建页；无矛盾
+
+## 2026-07-03 ingest | 第 4 批：Headroom + Python 包管理 + WSL/zsh
+
+- Source 7: `Develop/Ai/Plugin/headroom.md` → [[Headroom - 上下文压缩代理]]
+  - 创建：[[Headroom]]（实体）、[[上下文压缩]]（概念）
+  - AI 上下文压缩代理：拦截 LLM API 调用，压缩 60%–95%，本地可逆；Python 库 / 代理 / MCP / TS SDK
+- Source 8: `Develop/Python/包管理工具.md` → [[Python 包管理工具对比]]
+  - 创建：[[uv]]（实体）、[[Python 包管理]]（概念）
+  - pip / pipx / uv 三层对比；uv（Rust）10–100× pip，替代 pip+pipx+venv+pyenv
+- Source 9: `Develop/环境/wsl.md` → [[WSL zsh 终端配置]]
+  - 创建：[[oh-my-zsh]]（实体）、[[zsh 终端配置]]（概念）
+  - zsh + oh-my-zsh + autosuggestions/syntax-highlighting + Nerd Fonts
+- 新建页：9（3 source + 3 entity + 3 concept）；更新页：5（index/overview/hot/log/manifest）
+- 编辑判断（ACCEPT）：pip / pipx / zsh 为基线设施，折入概念页对比，未单独建实体
+- 关键发现 / 交叉引用：
+  - [[Headroom]] 安装 `uv tool install "headroom-ai[all]"` 直接依赖 [[uv]] —— 两源强交叉
+  - [[上下文压缩]]（Headroom）↔ [[技能自进化闭环]]（SkillOpt）同属 agent 效率谱系：压缩省输入带宽，固化省重复推理，互补可叠加
+  - oh-my-zsh 不继承 `~/.bashrc` → 切换后已装命令 `command not found`，需补环境变量（含 `~/.local/bin`）到 `~/.zshrc`
 
 ## 2026-07-02 re-ingest | 源笔记 delta：网页 + 软件
 

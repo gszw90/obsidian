@@ -1,13 +1,16 @@
 {
   "sources": {
     "mac/技巧.md": {
-      "hash": "89cf3e402e2cf68ecdd358c1c5ece875",
-      "ingested_at": "2026-07-01",
+      "hash": "d6b8ad1511991b464944380d6226154e",
+      "ingested_at": "2026-07-03",
       "pages_created": [
         "wiki/sources/Mac-技巧-快捷键.md",
         "wiki/concepts/Mac-快捷键.md"
       ],
-      "pages_updated": []
+      "pages_updated": [
+        "wiki/sources/Mac-技巧-快捷键.md",
+        "wiki/concepts/Mac-快捷键.md"
+      ]
     },
     "mac/软件.md": {
       "hash": "53fe9747611138eb8b6ef4ac41437416",
@@ -79,6 +82,36 @@
         "wiki/entities/OrbStack.md",
         "wiki/sources/跨平台软件清单.md"
       ]
+    },
+    "Develop/Ai/Plugin/headroom.md": {
+      "hash": "d1ab4e080e9a180f991bf14e84d86421",
+      "ingested_at": "2026-07-03",
+      "pages_created": [
+        "wiki/sources/Headroom-上下文压缩代理.md",
+        "wiki/entities/Headroom.md",
+        "wiki/concepts/上下文压缩.md"
+      ],
+      "pages_updated": []
+    },
+    "Develop/Python/包管理工具.md": {
+      "hash": "aa64ba9871bd5b4e6102cd71893e77ed",
+      "ingested_at": "2026-07-03",
+      "pages_created": [
+        "wiki/sources/Python-包管理工具对比.md",
+        "wiki/entities/uv.md",
+        "wiki/concepts/Python-包管理.md"
+      ],
+      "pages_updated": []
+    },
+    "Develop/环境/wsl.md": {
+      "hash": "05894bcd6f519352656cf27ba97324ed",
+      "ingested_at": "2026-07-03",
+      "pages_created": [
+        "wiki/sources/WSL-zsh-终端配置.md",
+        "wiki/entities/oh-my-zsh.md",
+        "wiki/concepts/zsh-终端配置.md"
+      ],
+      "pages_updated": []
     }
   },
   "address_map": {}

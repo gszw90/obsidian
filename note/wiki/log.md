@@ -9,6 +9,16 @@ updated: 2026-07-03
 
 Ingest 操作记录。新条目置顶。
 
+## 2026-07-03 update | SkillOpt-Sleep rule judge 假阳性实证
+
+- 触发：用户要求「真正得到验证」night 6 的 0.050→0.550 accept 结果
+- 调查：`replay.py:50-54` 显示 `reference_kind="rule"` 任务走本地 `judges.py`（regex/contains/section_present，**不调 LLM**）；`--backend claude` 只改 `backend.attempt` 生成，不改判分
+- 矿工 `llm_miner.py:36-46` prompt 偏向程序化 checks → 几乎所有任务成 rule judge → 默认无法真验证
+- 真验证路径：`--tasks-file` 注入手写 `reference_kind="rubric"` 任务 → `replay.py` 改走 `backend.judge()` = `ClaudeBackend.judge()` 真 LLM 打分
+- 实测 night 7：held-out 0.017 → 0.017，**reject**。对比 night 6 的假阳性 accept
+- 更新：[[技能自进化闭环]] 陷阱节扩展（陷阱 3 + A/B 表）+ 新增「正确验证方法」节（含可复现命令）
+- 暂存两份（night6 `20260703-022027` / night7 `20260703-023236`）均未 adopt，线上 CLAUDE.md/SKILL.md 未动
+
 ## 2026-07-03 re-ingest | delta：技巧.md 增 Spotlight
 
 - 触发：`mac/技巧.md` hash 变更（`89cf3e40…` → `d6b8ad15…`），+3 行

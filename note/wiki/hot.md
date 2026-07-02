@@ -9,7 +9,15 @@ updated: 2026-07-03
 
 最近 ingest 上下文。下次会话先读这里，避免重读全页。
 
-## 2026-07-03 ingest | 第 4 批：Headroom + Python 包管理 + WSL/zsh（最新）
+## 2026-07-03 实证 | SkillOpt-Sleep rule judge 假阳性（最新）
+
+- 跑 `/skillopt-sleep run --backend claude` → night 6 报 0.050→0.550 accept，但 `replay: mock` + rule judge（regex/contains）→ **假阳性**
+- 候选规则全是格式过拟合（强制 `## Pages created` 表 / 字面 `Cross-reference`），`_why` 自承「满足 evaluator grep 串」
+- 真验证：手写 rubric 任务 `--tasks-file` + `--backend claude` → `ClaudeBackend.judge()` 真 LLM 打分 → night 7 **0.017→0.017 reject**
+- 结论写回 [[技能自进化闭环]]（陷阱 3 + 正确验证方法）
+- 关键：`--backend claude` 只改生成不改判分；rule judge 走本地 `judges.py` 不调 LLM。真验证必须 rubric 任务 + tasks-file
+
+## 2026-07-03 ingest | 第 4 批：Headroom + Python 包管理 + WSL/zsh
 
 - 新源：[[Headroom - 上下文压缩代理]]、[[Python 包管理工具对比]]、[[WSL zsh 终端配置]]
 - 新建实体：[[Headroom]]、[[uv]]、[[oh-my-zsh]]

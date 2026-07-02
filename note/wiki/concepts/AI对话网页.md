@@ -1,5 +1,6 @@
 ---
 title: AI 对话网页
+aliases: [AI 对话网页]
 type: concept
 created: 2026-07-02
 updated: 2026-07-02

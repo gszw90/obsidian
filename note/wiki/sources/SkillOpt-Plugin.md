@@ -1,5 +1,6 @@
 ---
 title: SkillOpt - 技能自进化插件
+aliases: [SkillOpt - 技能自进化插件]
 type: source
 source_path: Develop/Ai/Plugin/SkillOpt.md
 created: 2026-07-01

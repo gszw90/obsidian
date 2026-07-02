@@ -1,5 +1,6 @@
 ---
 title: Mac 开发软件 - 容器
+aliases: [Mac 开发软件 - 容器]
 type: source
 source_path: mac/软件.md
 created: 2026-07-01

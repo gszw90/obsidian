@@ -2,5 +2,6 @@
   "obsidian-git",
   "obsidian-hover-editor",
   "pretty-properties",
-  "obsidian-minimal-settings"
+  "obsidian-minimal-settings",
+  "obsidian-local-rest-api"
 ]

@@ -2,12 +2,39 @@
 title: 日志
 type: log
 created: 2026-07-01
-updated: 2026-07-03
+updated: 2026-07-11
 ---
 
 # 日志
 
 Ingest 操作记录。新条目置顶。
+
+## 2026-07-11 ingest | GitHub Trending 月度追踪启动
+
+- 触发：用户要求每月拉取 github trending 记录趋势，原始数据存 `note/Github/Trending/`，按月文件
+- 采集：`firecrawl scrape "github.com/trending?since=monthly"`（stars/月）+ `gh api repos/<o>/<r>` × 20（描述/语言/topics/license）→ `gh` 已 auth（gszw90）
+- 原始数据：`note/Github/Trending/2026-07.md`（20 仓库表 + 领域/语言分布）+ `2026-07-raw.jsonl`
+- 新建：[[GitHub Trending 月榜 2026-07]]（source）、[[GitHub Trending 月度追踪]]（concept，追踪机制 + 月度索引 + 分类法）、[[Apple Container]]（entity）
+- 主题：**AI agent 基础设施爆发**——20 席 65% AI，agent 编排/MCP/网关/多路复用占近半
+- 编辑判断：20 仓库仅建 1 实体（apple/container，强关联 [[OrbStack]]/[[开发容器]]）；其余折入表，避免月月 ×N 实体维护负担
+- 自动化：durable cron `7 3 1 * *`（每月 1 日 3:07），prompt 复跑采集+ingest 流程
+- 结构性：新增第 4 数据根 `note/Github/Trending/`（外部自动采集，区别于 Develop/Mac/Resource 个人笔记）
+- 路径教训：zsh 不做 `$VAR` 词分割（`for r in $repos` 失败）→ 显式列表；CJK 路径 + WSL 偶发丢目录 → 全用绝对路径
+
+## 2026-07-11 ingest | 第 5 批：HTML+CSS + 两本参考书 stub
+
+- 来源：`Develop/前端/html + css.md`、`Resource/pdf/Python学习手册（原书第4版）.pdf`、`Resource/pdf/kubernetes-book-jimmysong-v20250804.pdf`
+- 新建来源页：[[HTML CSS 基础]]、[[Python 学习手册（第4版）]]、[[Kubernetes book（Jimmy Song）]]
+- 新建概念页：[[CSS 布局与单位]]
+- 主题扩展：**前端 / CSS**（首次入 vault）、**参考书籍**存根
+- 编辑判断：
+  - HTML/CSS 折入 1 概念页（[[CSS 布局与单位]]），不单独建实体（基线设施，同 pip/zsh 折叠惯例）
+  - 两本 PDF 教材做**书籍参考 stub**（仅书目存根，不做概念抽取）——书太厚全量 ingest 不经济，按需再抽
+- 关键洞察：
+  - 移动端用 dvh/svh/lvh 替代 vh，规避地址栏伸缩遮挡
+  - Kubernetes（编排）在 OrbStack（单机容器）之上一层的抽象层次
+- 路径波折：源 PDF 初始在 `Develop/资源/`，ingest 中途被移至 `Resource/pdf/`（用户整理）；CJK 路径 zsh 下需 Python glob 探测
+- 源笔记纠错：`grid-area: heder`→`header`、`vmin/vmax` 注释 `vm`→`vw`
 
 ## 2026-07-03 update | SkillOpt-Sleep rule judge 假阳性实证
 

@@ -2,7 +2,7 @@
 title: 概览
 type: overview
 created: 2026-07-01
-updated: 2026-07-03
+updated: 2026-07-11
 ---
 
 # 概览
@@ -21,6 +21,9 @@ updated: 2026-07-03
 - **终端环境** — WSL + zsh 配置（[[oh-my-zsh]]、[[zsh 终端配置]]）
 - **浏览器扩展** — 脚本管理 / 翻译 / 广告拦截（[[浏览器扩展]]、[[暴力猴]]、[[沉浸式翻译]]、[[AdGuard]]）
 - **跨平台软件** — 下载（[[gopeed]]）、翻墙代理（[[翻墙代理工具]]、[[v2rayN]]、[[clash-verge]]）、阅读（[[legado]]）
+- **前端 / CSS** — 单位与布局（[[CSS 布局与单位]]）
+- **参考书籍** — 教材类 PDF 书目存根，按需抽概念（[[Python 学习手册（第4版）]]、[[Kubernetes book（Jimmy Song）]]）
+- **GitHub 趋势追踪** — 每月 trending 快照与领域/语言分布（[[GitHub Trending 月度追踪]]、[[GitHub Trending 月榜 2026-07]]）
 
 ## 结构
 

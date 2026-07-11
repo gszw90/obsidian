@@ -2,8 +2,10 @@
 title: 索引
 type: index
 created: 2026-07-01
-updated: 2026-07-03
+updated: 2026-07-11
 ---
+
+> 注：含 GitHub Trending 追踪——见 [[GitHub Trending 月度追踪]]。
 
 # 索引
 
@@ -26,6 +28,10 @@ updated: 2026-07-03
 - [[Headroom - 上下文压缩代理]]
 - [[Python 包管理工具对比]]
 - [[WSL zsh 终端配置]]
+- [[HTML CSS 基础]]
+- [[Python 学习手册（第4版）]]
+- [[Kubernetes book（Jimmy Song）]]
+- [[GitHub Trending 月榜 2026-07]]
 
 ## 概念（Concepts）
 
@@ -39,6 +45,8 @@ updated: 2026-07-03
 - [[上下文压缩]]
 - [[Python 包管理]]
 - [[zsh 终端配置]]
+- [[CSS 布局与单位]]
+- [[GitHub Trending 月度追踪]]
 
 ## 实体（Entities）
 
@@ -59,3 +67,4 @@ updated: 2026-07-03
 - [[Headroom]]
 - [[uv]]
 - [[oh-my-zsh]]
+- [[Apple Container]]

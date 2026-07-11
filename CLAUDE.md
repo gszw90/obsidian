@@ -16,6 +16,7 @@ Personal knowledge base ("second brain"). Obsidian vault fed by structured inges
 │   ├── .raw/
 │   │   └── .manifest.json        ← DELTA TRACKER (md5 per source) — edit carefully
 │   ├── Develop/  Mac/  Resource/ ← SOURCE notes (raw personal notes, immutable inputs)
+│   ├── Github/Trending/          ← AUTO-COLLECTED external data (monthly GitHub trending snapshots: <YYYY-MM>.md + <YYYY-MM>-raw.jsonl). Cron/manual-written, NOT a personal note. See wiki/concepts/GitHub-Trending-月度追踪.md
 │   ├── wiki/                     ← INGESTED knowledge base
 │   │   ├── sources/              ← one summary page per source note
 │   │   ├── entities/             ← one page per product / org / repo / person
@@ -121,6 +122,6 @@ tags: [...]
 ## Gotchas
 
 - **WSL + CJK paths** — `find`/`ls` output for Chinese filenames can render garbled in shell. Use Python (`glob`) via `ctx_execute` for reliable listing, or `git status --porcelain` (quotes non-ASCII paths).
-- **Source notes immutable inputs.** Never edit files under `Develop/`, `Mac/`, `Resource/` during ingest (source of truth wiki mirrors). Only `.raw/` file ingest mutates: `.manifest.json`.
+- **Source notes immutable inputs.** Never edit files under `Develop/`, `Mac/`, `Resource/` during ingest (source of truth wiki mirrors). Only `.raw/` file ingest mutates: `.manifest.json`. Exception: `Github/Trending/` is auto-collected external data (written by the monthly trending pull), not a personal note.
 - **Editorial judgment expected.** Not every mentioned tool needs entity page — fold baseline infra (e.g. `pip`, `pipx`, `zsh`) into concept comparison pages. One page per *entity-worthy* product.
 - **No build / no tests.** Docs project. "Verification" = link integrity check + valid manifest JSON, not running test suite.

@@ -2,14 +2,39 @@
 title: 热缓存
 type: hot
 created: 2026-07-01
-updated: 2026-07-03
+updated: 2026-07-11
 ---
 
 # 热缓存
 
 最近 ingest 上下文。下次会话先读这里，避免重读全页。
 
-## 2026-07-03 实证 | SkillOpt-Sleep rule judge 假阳性（最新）
+## 2026-07-11 ingest | GitHub Trending 月度追踪启动（最新）
+
+- 新管线：每月 1 日 durable cron 拉 github trending → 富化 → 入 wiki
+- 本月（2026-07）：[[GitHub Trending 月榜 2026-07]] + [[GitHub Trending 月度追踪]]（机制/索引）+ [[Apple Container]] 实体
+- 原始数据新根目录：`note/Github/Trending/`（`2026-07.md` + `2026-07-raw.jsonl`）
+- 采集：firecrawl scrape 拿 stars/月 + `gh api` 富化描述/语言/topics/license
+- 关键洞察：
+  - **AI agent 基础设施爆发**：20 席 65% AI，agent 基建占近半（orca 舰队 / herdr 多路复用 / OmniRoute 网关同时上榜 = agent 层抽象成熟）
+  - DeusData/codebase-memory-mcp 与本 vault 在用的 codegraph MCP **同思路**，可对比候选
+  - apple/container 官方入场，对标 [[OrbStack]]
+  - system_prompts_leaks 含 Claude Fable 5 / Opus 4.8 / Claude Code 系统 prompt
+- 编辑判断：20 仓库只建 1 实体（apple/container，强 vault 关联），其余入表
+
+## 2026-07-11 ingest | 第 5 批：HTML+CSS + 参考书 stub
+
+- 新源：[[HTML CSS 基础]]、[[Python 学习手册（第4版）]]、[[Kubernetes book（Jimmy Song）]]
+- 新概念：[[CSS 布局与单位]]
+- 主题扩展：**前端 / CSS**（首次）、**参考书籍**存根机制
+- 关键洞察：
+  - 移动端 dvh/svh/lvh 替代 vh，规避地址栏伸缩遮挡
+  - flex 简写：`flex:1`=平分、`none`=不伸缩、`auto`=按内容伸缩、`initial`=可缩不可放
+  - Kubernetes（多节点编排）vs OrbStack（单机容器）：抽象层次差
+- 编辑判断：HTML/CSS 折入 1 概念页；两本 PDF 教材做**书籍参考 stub**（不抽概念，按需补）
+- 源笔记纠错：`grid-area: heder`→`header`、`vm`→`vw`
+
+## 2026-07-03 实证 | SkillOpt-Sleep rule judge 假阳性
 
 - 跑 `/skillopt-sleep run --backend claude` → night 6 报 0.050→0.550 accept，但 `replay: mock` + rule judge（regex/contains）→ **假阳性**
 - 候选规则全是格式过拟合（强制 `## Pages created` 表 / 字面 `Cross-reference`），`_why` 自承「满足 evaluator grep 串」

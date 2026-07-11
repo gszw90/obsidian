@@ -112,6 +112,51 @@
         "wiki/concepts/zsh-终端配置.md"
       ],
       "pages_updated": []
+    },
+    "Develop/前端/html + css.md": {
+      "hash": "c8a45ff6020dfd612f818e6eb9356aec",
+      "ingested_at": "2026-07-11",
+      "pages_created": [
+        "wiki/sources/HTML-CSS-基础.md",
+        "wiki/concepts/CSS-布局与单位.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/hot.md",
+        "wiki/log.md",
+        "wiki/overview.md"
+      ]
+    },
+    "Resource/pdf/Python学习手册（原书第4版）.pdf": {
+      "hash": "899abe98aa9a0c77892620bbaf34b88d",
+      "ingested_at": "2026-07-11",
+      "pages_created": [
+        "wiki/sources/Python学习手册-第4版.md"
+      ],
+      "pages_updated": []
+    },
+    "Resource/pdf/kubernetes-book-jimmysong-v20250804.pdf": {
+      "hash": "79bc4c5839b9481bf322ca1b9515b3ad",
+      "ingested_at": "2026-07-11",
+      "pages_created": [
+        "wiki/sources/Kubernetes-book-jimmysong.md"
+      ],
+      "pages_updated": []
+    },
+    "Github/Trending/2026-07.md": {
+      "hash": "trending-snapshot-2026-07",
+      "ingested_at": "2026-07-11",
+      "pages_created": [
+        "wiki/sources/GitHub-Trending-2026-07.md",
+        "wiki/concepts/GitHub-Trending-月度追踪.md",
+        "wiki/entities/apple-container.md"
+      ],
+      "pages_updated": [
+        "wiki/index.md",
+        "wiki/hot.md",
+        "wiki/log.md",
+        "wiki/overview.md"
+      ]
     }
   },
   "address_map": {}

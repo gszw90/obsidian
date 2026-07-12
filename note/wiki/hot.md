@@ -2,12 +2,20 @@
 title: 热缓存
 type: hot
 created: 2026-07-01
-updated: 2026-07-11
+updated: 2026-07-12
 ---
 
 # 热缓存
 
 最近 ingest 上下文。下次会话先读这里，避免重读全页。
+
+## 2026-07-12 re-ingest | GitHub Trending 2026-07 二次抓取（最新）
+
+- 触发：`fetch_trending.py 2026-07 --force` —— 核验脚本修复（gh_enrich 加重试+并行）
+- **修复**：gh api 在 WSL2 下并行握手 TLS timeout（原版 1/19 成功）→ 5 次重试 + 指数退避 + ThreadPool x3 → 连续两次 19/19
+- 数据：19 repos（首抓 20，当日榜单波动 -1），主题稳定——AI Agent 基础设施仍占 8 席（68% AI 相关）
+- 更新：[[GitHub Trending 月榜 2026-07]]（Top5/分布/年龄数字刷新）+ [[Apple Container]]（#4 16,789 stars/月）+ manifest `ingested_at`
+- 编辑判断：re-fetch 数字微动，叙事主题不变 → 只刷新数字 + bump updated，不新建页
 
 ## 2026-07-11 ingest | GitHub Trending 月度追踪启动（最新）
 

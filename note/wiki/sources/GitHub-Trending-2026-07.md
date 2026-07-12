@@ -3,7 +3,7 @@ title: GitHub Trending 月榜 2026-07
 aliases: [GitHub Trending 月榜 2026-07]
 type: source
 created: 2026-07-11
-updated: 2026-07-11
+updated: 2026-07-12
 tags: [GitHub, trending, 趋势, 月度, AI-agent, 来源]
 ---
 
@@ -14,45 +14,51 @@ tags: [GitHub, trending, 趋势, 月度, AI-agent, 来源]
 > [!note] 采集方式
 > `firecrawl scrape "github.com/trending?since=monthly"` 拿 stars/月 → `gh api repos/<o>/<r>` 富化（描述/语言/topics/license）。
 
+> [!info] 2026-07-12 re-fetch
+> 本月二次抓取（首次 07-11）。19 席——trending 页当日解析 19，较首抓 20 少 1，属榜单正常波动。数字为 07-12 快照。
+
 ## 月度主题：AI Agent 基础设施爆发
 
-20 席中 **13 席 AI 相关（65%）**，agent 基础设施独占近半。核心信号：agent 层正从单工具向**舰队 / 多路复用 / 网关**基础设施演化——三个抽象同时上榜：
+19 席中 **13 席 AI 相关（68%）**，agent 基础设施独占 8 席。核心信号：agent 层正从单工具向**舰队 / 多路复用 / 网关**基础设施演化——三个抽象同时上榜：
 
-- **并行舰队**：stablyai/orca（agent fleet ADE）
-- **多路复用**：ogulcancelik/herdr（终端 agent multiplexer）
-- **统一网关**：diegosouzapw/OmniRoute（231+ provider 一个端点）
+- **并行舰队**：stablyai/orca（agent fleet ADE，#8）
+- **多路复用**：ogulcancelik/herdr（终端 agent multiplexer，#11）
+- **统一网关**：diegosouzapw/OmniRoute（231+ provider 一个端点，#12）
 
 ## Top 5（按 stars/月）
 
 | # | Stars/月 | 仓库 | 领域 | 一句话 |
 |---|---------:|------|------|--------|
-| 1 | 32,095 | calesthio/OpenMontage | AI 内容生产 | agentic 视频生产系统 |
-| 2 | 28,774 | Panniantong/Agent-Reach | Agent 基建 | agent 全网搜索（含 B 站/小红书） |
-| 3 | 26,480 | DeusData/codebase-memory-mcp | Agent 基建 | 代码库→知识图谱 MCP（同本 vault codegraph 思路） |
-| 4 | 19,234 | [[Apple Container]] | 容器 | Apple 官方 Mac Linux 容器（Swift） |
-| 5 | 14,876 | iptv-org/iptv | 媒体资源 | 全球 IPTV m3u 合集 |
+| 1 | 32,538 | calesthio/OpenMontage | AI 内容生产 | agentic 视频生产系统 |
+| 2 | 28,880 | Panniantong/Agent-Reach | Agent 基建 | agent 全网搜索（含 B 站/小红书） |
+| 3 | 26,790 | DeusData/codebase-memory-mcp | Agent 基建 | 代码库→知识图谱 MCP（同本 vault codegraph 思路） |
+| 4 | 16,789 | [[Apple Container]] | 容器 | Apple 官方 Mac Linux 容器（Swift） |
+| 5 | 15,068 | iptv-org/iptv | 媒体资源 | 全球 IPTV m3u 合集（132k 总 stars 老牌） |
 
 ## 领域分布
 
 | 领域 | 数 | 备注 |
 |------|---:|------|
-| AI Agent 基础设施 | 9 | 占近半，本月最强信号 |
-| AI 安全 / 红队 | 3 | strix + SkillSpector + hiring-agent，AI 红队工具化 |
-| AI 资源 | 1 | system_prompts_leaks（含 Claude Fable 5 / Opus 4.8 / GPT-5.6 prompt） |
+| AI Agent 基础设施 | 8 | 占近半，本月最强信号 |
+| AI 安全 / 红队 | 2 | strix + SkillSpector，AI 红队工具化 |
+| 其他 | 2 | no-mistakes（git 防误推）/ spdlog（C++ 日志） |
+| AI 内容生产 | 1 | OpenMontage |
 | 容器 / 云原生 | 1 | apple/container |
-| P2P / 网络 | 1 | iroh（QUIC + NAT） |
+| 媒体资源 | 1 | iptv-org/iptv |
+| AI 资源 / 数据 | 1 | system_prompts_leaks（含 Claude Fable 5 / Opus 4.8 prompt） |
+| AI 会议 | 1 | meetily（Parakeet 转录） |
 | 隐私通讯 | 1 | simplex-chat |
-| 媒体 / 开发工具 / 自托管 | 3 | iptv / no-mistakes / TREK |
+| P2P / 网络 | 1 | iroh（QUIC + NAT） |
 
 ## 语言分布
 
-`TypeScript 6` · `Python 6` · `Rust 3` · `C/Swift/Haskell/Go/JavaScript 各 1`
+`Python 5` · `TypeScript 4` · `Rust 3` · `C++ 2` · `C / Swift / JavaScript / Haskell / Go 各 1`
 
-> [!key-insight] TS + Python 主导 agent 工具链；Rust 占性能敏感位（转录/多路复用/P2P）。
+> [!key-insight] Python 主导 agent 工具链；TS 紧随；Rust 占性能敏感位（转录 meetily / 多路复用 herdr / P2P iroh）。
 
 ## 仓库年龄观察
 
-多为 **2026 H1 新建**（2–5 月龄冲榜）：orca/herdr/iptv 新版（2026-03）、Agent-Reach/codebase-memory-mcp（2026-02）。老牌仅 iptv-org（2018）、simplex-chat（2019）、iroh（2022）。
+约 **8/19 创建于 6 个月内**——新项目冲榜主战场。多为 2026 H1 新建（2–5 月龄）：orca/herdr、Agent-Reach/codebase-memory-mcp。老牌仅 iptv-org（2018）、simplex-chat（2019）、iroh（2022）、spdlog（2015）。
 
 > [!key-insight] 月度 trending 已成 AI agent 新项目冷启动主战场——新仓库 2–3 个月可冲万星。
 
@@ -66,4 +72,4 @@ tags: [GitHub, trending, 趋势, 月度, AI-agent, 来源]
 ## 关联
 
 - 追踪机制：[[GitHub Trending 月度追踪]]
-- 原始数据：`note/Github/Trending/2026-07.md`（含完整 20 表 + 领域/语言分布）
+- 原始数据：`note/Github/Trending/2026-07.md`（含完整 19 表 + 领域/语言分布）

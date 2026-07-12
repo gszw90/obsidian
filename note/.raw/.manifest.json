@@ -145,17 +145,15 @@
     },
     "Github/Trending/2026-07.md": {
       "hash": "trending-snapshot-2026-07",
-      "ingested_at": "2026-07-11",
-      "pages_created": [
-        "wiki/sources/GitHub-Trending-2026-07.md",
-        "wiki/concepts/GitHub-Trending-月度追踪.md",
-        "wiki/entities/apple-container.md"
-      ],
+      "ingested_at": "2026-07-12",
+      "pages_created": [],
       "pages_updated": [
+        "wiki/sources/GitHub-Trending-2026-07.md",
+        "wiki/entities/apple-container.md",
+        "wiki/concepts/GitHub-Trending-月度追踪.md",
         "wiki/index.md",
         "wiki/hot.md",
-        "wiki/log.md",
-        "wiki/overview.md"
+        "wiki/log.md"
       ]
     }
   },

@@ -2,12 +2,20 @@
 title: 日志
 type: log
 created: 2026-07-01
-updated: 2026-07-11
+updated: 2026-07-12
 ---
 
 # 日志
 
 Ingest 操作记录。新条目置顶。
+
+## 2026-07-12 re-ingest | GitHub Trending 2026-07 二次抓取
+
+- 触发：核验 `fetch_trending.py` 修复（gh_enrich 重试 + ThreadPool x3，治 WSL2 TLS handshake timeout）
+- 采集：`--force` 重抓 → 19 repos 全量富化（19/19，0 失败）
+- 更新：`sources/GitHub-Trending-2026-07.md`（Top5/领域/语言/年龄数字刷新，19 席）、`entities/apple-container.md`（#4 16,789 stars/月）、`hot.md`、`index.md`、manifest `ingested_at`
+- 无新建页：re-fetch 数字微动，主题（AI Agent 基建 8 席 / 68% AI）稳定
+- 关键发现：trending 页当日解析 19（首抓 20），属榜单正常波动；apple/container stars/月 19,234→16,789（回落）
 
 ## 2026-07-11 ingest | GitHub Trending 月度追踪启动
 

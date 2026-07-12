@@ -14,7 +14,8 @@ Gotchas baked in (learned the hard way, see SKILL.md):
   - CJK + WSL can silently drop dirs -> all paths absolute, no cd into CJK dirs.
   - firecrawl markdown has nav noise -> repo descriptions come from gh api, not page parse.
 """
-import argparse, json, os, re, subprocess, sys, datetime
+import argparse, json, os, re, subprocess, sys, datetime, time
+from concurrent.futures import ThreadPoolExecutor
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(SCRIPT_DIR)))  # .../note
@@ -94,17 +95,24 @@ def parse_trending(md):
     return sorted(best.values(), key=lambda c: -c["stars_month"])
 
 
-def gh_enrich(slug):
-    """gh api repos/SLUG -> dict or None on 404."""
+def gh_enrich(slug, tries=5):
+    """gh api repos/SLUG -> dict or None on 404. Retries w/ exponential backoff — WSL2 TLS handshakes timeout under parallel burst."""
     jq = '{repo:.full_name, desc:.description, lang:.language, stars:.stargazers_count, forks:.forks_count, topics:.topics, home:.homepage, license:(.license.spdx_id // "None"), created:.created_at, pushed:.pushed_at, archived:.archived}'
-    r = sh(f'gh api "repos/{slug}" --jq {json.dumps(jq)}')
-    if r.returncode != 0 or not r.stdout.strip():
-        print(f"  gh api FAIL {slug}: {r.stderr.strip()[:120]}", file=sys.stderr)
-        return None
-    try:
-        return json.loads(r.stdout.strip())
-    except json.JSONDecodeError:
-        return None
+    r = None
+    for i in range(tries):
+        r = sh(f'gh api "repos/{slug}" --jq {json.dumps(jq)}')
+        if r.returncode == 0 and r.stdout.strip():
+            try:
+                return json.loads(r.stdout.strip())
+            except json.JSONDecodeError:
+                return None
+        # 404 = repo gone, no point retrying; everything else (TLS timeout, 5xx, rate) -> backoff
+        if r.stderr and "404" in r.stderr:
+            break
+        if i < tries - 1:
+            time.sleep(2 ** (i + 1))  # ponytail: 2s,4s,8s,16s — TLS timeouts are transient, patience wins
+    print(f"  gh api FAIL {slug}: {(r.stderr if r else '').strip()[:120]}", file=sys.stderr)
+    return None
 
 
 def build_md(period, rows):
@@ -180,10 +188,12 @@ def main():
         sys.exit(f"解析出 0 仓库——firecrawl 输出格式可能变了，检查 {tmp}")
     print(f"      {len(cards)} repos from trending page")
 
-    print(f"[2/3] gh api enrich ...")
+    WORKERS = 3
+    print(f"[2/3] gh api enrich (x{WORKERS} parallel, retry=5 backoff) ...")
+    with ThreadPoolExecutor(max_workers=WORKERS) as ex:
+        enriched = list(ex.map(lambda c: gh_enrich(c["slug"]), cards))
     rows = []
-    for c in cards:
-        meta = gh_enrich(c["slug"])
+    for c, meta in zip(cards, enriched):
         if not meta:
             continue
         meta["stars_month"] = c["stars_month"]

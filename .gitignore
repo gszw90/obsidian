@@ -1,6 +1,8 @@
-.claude
+.claude/*
+!.claude/skills/
 .idea
 .vscode
 .skillopt-sleep
+__pycache__/
 # Firecrawl scrape cache
 .firecrawl/
